@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                margin-top: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            button {
+                font-size: 0.7em;
+                text-transform: uppercase;
+                padding: 1.5em;
+                background: rgb(255, 0, 0);
+                outline: 0;
+                border: 0;
+                cursor: pointer;
+                border-radius: 30px;
+                transition: all 0.25s ease-in-out;
+                position: relative;
+                box-shadow: 0 0 0 3px inset rgba(0, 0, 0);
+            }
+            button:hover {
+                color: rgb(255, 255, 255);
+            }
+            p {
+                font-size: 2em;
+                margin-right: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <p>LECTURE:</p>
+        <p class="random" style="font-size: 1em"></p>
+        <button class="btn">Generate Random Lecture</button>
+        <script>
+            const randomP = document.querySelector(".random");
+            const btn = document.querySelector(".btn");
+            const lectures = [
+                "Pasivno kolo za diferenciranje",
+                "Aktivno kolo za diferenciranje",
+                "Pasivno kolo za integraljenje",
+                "Aktivno kolo za integraljenje",
+                "Komparatori napona -> Vr = 0v",
+                "Komparatori napona -> Vr = 5v",
+                "Smitovo okidno kolo",
+                "Ogranicavaci: obicna dioda i baterija",
+                "Ogranicavaci: obicna dioda i zener dioda",
+                "Ogranicavaci: jedna zener dioda",
+                "Ogranicavaci: dve zener diode",
+                "Frekvencijska karakteristika",
+                "Niskopropusni filter prvog reda",
+                "Niskopropusni filter drugog reda",
+                "Visokopropusni filter prvog reda",
+                "Visokopropusni filter drugog reda",
+                "Osnovni pojmovi o kalemu",
+                "Buck konvertor",
+                "Boost konvertor",
+                "Kolpicov oscilator",
+            ];
+            const generateRandomLecture = () => {
+                let randomLecture =
+                    lectures[Math.floor(Math.random() * lectures.length)];
+                randomP.innerHTML = `<h3>${randomLecture}</h3>`;
+            };
+            btn.addEventListener("click", generateRandomLecture);
+        </script>
+    </body>
+</html>
