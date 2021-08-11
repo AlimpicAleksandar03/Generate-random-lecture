@@ -16,6 +16,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                font-family: sans-serif;
             }
             button {
                 font-size: 0.7em;
@@ -29,6 +30,7 @@
                 transition: all 0.25s ease-in-out;
                 position: relative;
                 box-shadow: 0 0 0 3px inset rgba(0, 0, 0);
+                font-weight: bold;
             }
             button:hover {
                 color: rgb(255, 255, 255);
@@ -47,26 +49,26 @@
             const randomP = document.querySelector(".random");
             const btn = document.querySelector(".btn");
             const lectures = [
-                "Pasivno kolo za diferenciranje",
-                "Aktivno kolo za diferenciranje",
-                "Pasivno kolo za integraljenje",
-                "Aktivno kolo za integraljenje",
-                "Komparatori napona -> Vr = 0v",
-                "Komparatori napona -> Vr = 5v",
-                "Smitovo okidno kolo",
-                "Ogranicavaci: obicna dioda i baterija",
-                "Ogranicavaci: obicna dioda i zener dioda",
-                "Ogranicavaci: jedna zener dioda",
-                "Ogranicavaci: dve zener diode",
-                "Frekvencijska karakteristika",
-                "Niskopropusni filter prvog reda",
-                "Niskopropusni filter drugog reda",
-                "Visokopropusni filter prvog reda",
-                "Visokopropusni filter drugog reda",
-                "Osnovni pojmovi o kalemu",
-                "Buck konvertor",
-                "Boost konvertor",
-                "Kolpicov oscilator",
+                "1. Kola za diferenciranje i integraljenje",
+                "2. Pasivni ograničavači napona",
+                "3. Frekvencijska karakteristika",
+                "4. Pasivni filtri",
+                "5. Osnovni pojmovi o kalemu",
+                "6. Bust konvertor",
+                "7. Bak konvertor",
+                "8. Komparatori napona",
+                "9. Šmitovo okidno kolo",
+                "10. Kolpicov oscilator sa paralelno vezanim kvarcom",
+                "11. RS, JK, D i T flip-flop",
+                "12. Astabilni multivibrator",
+                "13. Monostabilni multivibrator",
+                "14. Koderi i dekoderi",
+                "15. Multiplekseri",
+                "16. Demultiplekseri",
+                "17. Registri",
+                "18. Binarni polusabirač",
+                "19. D/A konvertor sa lestvičastom otpornom mrežom",
+                "20. A/D konvertor sa dvojnom integracijom",
             ];
             const generateRandomLecture = () => {
                 let randomLecture =
