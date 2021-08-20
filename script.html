@@ -28,7 +28,6 @@
                 cursor: pointer;
                 border-radius: 30px;
                 transition: all 0.25s ease-in-out;
-                position: relative;
                 box-shadow: 0 0 0 3px inset rgba(0, 0, 0);
                 font-weight: bold;
             }
@@ -70,9 +69,12 @@
                 "19. D/A konvertor sa lestvičastom otpornom mrežom",
                 "20. A/D konvertor sa dvojnom integracijom",
             ];
+            const randomIdx = (arr) => {
+                return Math.floor(Math.random() * arr.length);
+            };
             const generateRandomLecture = () => {
-                const randomLecture =
-                    lectures[Math.floor(Math.random() * lectures.length)];
+                const randomIndex = randomIdx(lectures);
+                const randomLecture = lectures[randomIndex];
                 randomP.innerHTML = `<h3>${randomLecture}</h3>`;
             };
             btn.addEventListener("click", generateRandomLecture);
